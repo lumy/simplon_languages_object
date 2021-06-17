@@ -7,6 +7,8 @@ You should write a software in the languages of your choice (not python thought)
 Your languages might not implement all design pattern asked in the subject (javascript doesn't
 implement Interface), in this case you'll have to adapt your code to be as close as possible as the
 subject but you're free to adapt the subject in this case.
+You don't have to finish the subject, by if you start it, try to go as far as possible and ask
+questions !
 
 ## SANTA’SELVES
 
@@ -97,3 +99,61 @@ These were all specified through out the subject. Once that’s done, implement 
 class, implementing the interface.
 When an elf is told to wrap a gift, it does so all by itself, using the `Table` and `ConveyorBelt`
 to wrap up a gift and send it by pressing the `ConveyorBelt`’s OUT button.
+
+# The Boxes
+
+Let’s complicate things a little.
+Implement the `TableRand` and `ConveyorBeltRand` classes, that provide a random set of `Objects`.
+Your Elf must be able to make as many presents as possible using these Objects, and send them to
+Santa.
+When it can’t do anything anymore, it yells: `o’pa ere’s somin’ wron’ in da box!` Oh, by the way,
+there’s something really weird with the `ConveyorBeltRand`. It makes a lot of noise.
+The goblin mechanic that delivered it said it talks.
+More specifically, he said `espeex’n’XML`.
+Ruddy goblin accents, I never understand’em. The fact of the matter is, your `ConveyorBeltRand` must
+`speex’n’XML`: it must describe the gift it is sending, from the outside in,inXML.
+The goblin says it’s something called `serialization`,for what it’s worth.
+
+# IS SANTA QUANTUM?
+
+It is now time to implement SantaClaus, as a separate program. Santa is lazy, and simply waits for
+gifts to put them into the sleigh.
+A gift is the result of an `XMLserialization` of your objects. These, stored in files, are passed as
+parameters to Santa on the commandline:`./santa gift1.xml gift2.xml gift3.xml` You will have to show
+the inspector that your Santa loads each gift from XML into memory using what the ol’goblin called
+`deserialization`. To do so, you must take each gift, open it, take the toy inside it and put it
+back into the box. Quality control is very important for Santa: to know wether Shrodinger’s cat is
+still alive, he simply opens the box! When he takes the toy out of the box, it yells (useful tok
+know what’s inside, right?).
+
+
+# THE WARP MACHINE OR ONE MORE STEP TOWARDS DEMENTIA
+
+Gifts are coming out of a device called the Warp Machine.
+Any gift sent by the new `ConveyorBelt` with the OUT button is received by the warp machine, through
+one of these parts that look like a big magic sock. This sacred machine expects a mystical number
+before it connects to the elves’magical `conveyorbelt`, number provided by Santa when it is launchin
+warp mode with the `-w` flag (as in “WarpMeUpScotty”). There is an old saying among the dwarves,
+which goes something like this:
+
+> To connect the magical sock to the warp, this sock must be "figurated in ’u di pee multi-caste!?".
+> The mystical number works by quadruplet. The first one always starts between 234 and 239. Ask my
+> cousin gougle for more information.
+
+I didn’t say it was a nice saying. Just an old one.
+Anyways. Modify your `SantaClaus` program so that it takes this mystical number as parameter and
+properly configures the warp machine connected with the magic sock.
+In addition, the goblin mechanic made a new version of `ConveyorBeltRand`: the `MagicalCarpet`.
+Just like the `ConveyorBeltRand`, "espeex’n’XML", and the noise it produces is sent out into the
+warp.
+The XML is then captured by Santa’s sock. This lets Santa know what’s going on on the
+`ConveyorBelt`. He can then get the gift out of the wrap, and proves everything worked correctly to
+the inspector by grabbing the toy inside it.
+This means many elf production lines can all send their gifts to Santa at the same time!
+If several Santa's use the same mystical number, they will all receive the gifts destined to this
+number,
+which is very convenient for duplicating gifts. Several SantaClaus ? We told you he was quantum!
+Pay attention!
+
+Bonus: get together with other groups and use the same `XMLelements`. This will make it possible for
+your elf production lines to work with their Santas, and vice versa!
